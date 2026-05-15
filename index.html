@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael LiDonni — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+      </svg>
+      <span class="logo-text">Michael LiDonni</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <ul>
+          <li><a href="#" class="nav-link active" data-section="home">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.721 2.131a1 1 0 00-1.442 0L2 10.625V21a1 1 0 001 1h6v-7h6v7h6a1 1 0 001-1V10.625z"/></svg>
+            Home
+          </a></li>
+          <li><a href="#" class="nav-link" data-section="about">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            About
+          </a></li>
+          <li><a href="#" class="nav-link" data-section="projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Projects
+          </a></li>
+          <li><a href="#" class="nav-link" data-section="skills">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            Skills
+          </a></li>
+          <li><a href="#" class="nav-link" data-section="contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <p class="nav-label">Playlists</p>
+        <ul>
+          <li><a href="#" class="nav-link playlist-link year-link" data-year="sophomore">
+            <div class="playlist-thumb icon-soph"></div>
+            <div class="playlist-meta">
+              <span class="playlist-name">Sophomore Year</span>
+              <span class="playlist-by">by you</span>
+            </div>
+          </a></li>
+          <li><a href="#" class="nav-link playlist-link year-link" data-year="junior">
+            <div class="playlist-thumb icon-jun"></div>
+            <div class="playlist-meta">
+              <span class="playlist-name">Junior Year</span>
+              <span class="playlist-by">by you</span>
+            </div>
+          </a></li>
+          <li><a href="#" class="nav-link playlist-link year-link" data-year="senior">
+            <div class="playlist-thumb icon-sen"></div>
+            <div class="playlist-meta">
+              <span class="playlist-name">Senior Year</span>
+              <span class="playlist-by">by you</span>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+
+      <button class="add-playlist-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New Playlist
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-links">
+        <a href="https://github.com/michaellidonni" target="_blank">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-nav">
+        <button class="nav-arrow" id="back-btn" aria-label="Back">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"/></svg>
+        </button>
+        <button class="nav-arrow" id="fwd-btn" aria-label="Forward">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"/></svg>
+        </button>
+      </div>
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"/></svg>
+        <input type="text" placeholder="Search projects..." id="search-input" />
+      </div>
+      <div class="topbar-user">
+        <div class="user-avatar">M</div>
+        <span>Michael</span>
+      </div>
+    </header>
+
+    <!-- SCROLL CONTENT -->
+    <div class="scroll-area" id="scroll-area">
+
+      <!-- === HOME SECTION === -->
+      <section class="section" id="section-home">
+
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-organic-bg"></div>
+          <div class="hero-photo">
+            <div class="hero-avatar-circle">M</div>
+          </div>
+          <div class="hero-info">
+            <p class="hero-available">
+              <span class="available-dot"></span>
+              Available for Work
+            </p>
+            <h1 class="hero-title">Hi, I'm<br/><span class="hero-name">Michael LiDonni</span></h1>
+            <p class="hero-tagline">I build digital experiences</p>
+            <p class="hero-desc">Web Designer &amp; Developer<br/>based in New Jersey</p>
+            <div class="hero-actions">
+              <button class="btn-view-projects" id="view-projects-btn">View Projects</button>
+              <button class="btn-play-intro" id="play-btn">
+                <span class="intro-play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                Play Intro
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Me Preview -->
+        <div class="about-preview-card">
+          <div class="about-preview-bg"></div>
+          <div class="about-preview-content">
+            <h2>About Me</h2>
+            <p>I'm a web design student with a passion for building clean, functional digital experiences. From Bootstrap layouts to full-stack projects, I love turning ideas into real products.</p>
+            <button class="btn-more-about" id="more-about-btn">More About Me</button>
+          </div>
+        </div>
+
+        <!-- Featured Projects -->
+        <div class="content-section">
+          <div class="section-header">
+            <h2>Featured Projects</h2>
+            <a href="#" class="show-all" id="see-all-btn">See all</a>
+          </div>
+          <div class="cards-grid featured-grid" id="featured-grid"></div>
+        </div>
+
+      </section>
+
+      <!-- === ABOUT SECTION === -->
+      <section class="section hidden" id="section-about">
+        <div class="about-hero">
+          <div class="about-avatar-wrap">
+            <div class="about-avatar">M</div>
+            <div class="about-avatar-ring"></div>
+          </div>
+          <div class="about-text">
+            <p class="about-type">Profile</p>
+            <h1 class="about-name">Michael LiDonni</h1>
+            <p class="about-bio">A web design student with 3 years of hands-on experience. From Bootstrap layouts to full-stack projects, I love turning ideas into real products. Every project pushed me to learn something new and build something real.</p>
+            <div class="about-stats">
+              <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Years</span></div>
+              <div class="stat"><span class="stat-num" data-target="18">0</span><span class="stat-label">Projects</span></div>
+              <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">Skills</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PROJECTS SECTION === -->
+      <section class="section hidden" id="section-projects">
+        <div class="projects-hero">
+          <p class="year-tag">All Work</p>
+          <h1>Projects</h1>
+          <p class="year-sub">Every project, every year.</p>
+        </div>
+        <div class="content-section">
+          <div class="cards-grid" id="all-projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- === SKILLS SECTION === -->
+      <section class="section hidden" id="section-skills">
+        <div class="skills-hero">
+          <p class="year-tag">Toolkit</p>
+          <h1>Skills &amp; Tools</h1>
+          <p class="year-sub">Technologies I've worked with throughout my journey.</p>
+        </div>
+        <div class="skills-body">
+          <div class="skills-group">
+            <h3 class="skills-group-label">Languages &amp; Markup</h3>
+            <div class="skills-grid">
+              <div class="skill-chip">HTML</div>
+              <div class="skill-chip">CSS</div>
+              <div class="skill-chip">JavaScript</div>
+              <div class="skill-chip">Node.js</div>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3 class="skills-group-label">Frameworks &amp; Libraries</h3>
+            <div class="skills-grid">
+              <div class="skill-chip">Bootstrap</div>
+              <div class="skill-chip">Flexbox</div>
+              <div class="skill-chip">CSS Grid</div>
+              <div class="skill-chip">jQuery</div>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3 class="skills-group-label">Design &amp; Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-chip">Figma</div>
+              <div class="skill-chip">Photoshop</div>
+              <div class="skill-chip">Git</div>
+              <div class="skill-chip">GitHub</div>
+              <div class="skill-chip">Responsive Design</div>
+              <div class="skill-chip">UI/UX</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === CONTACT SECTION === -->
+      <section class="section hidden" id="section-contact">
+        <div class="contact-hero">
+          <p class="year-tag">Get In Touch</p>
+          <h1>Contact</h1>
+          <p class="year-sub">Let's connect and build something great.</p>
+        </div>
+        <div class="contact-body">
+          <a href="https://github.com/michaellidonni" class="contact-card" target="_blank">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-handle">@michaellidonni</span>
+            </div>
+          </a>
+          <a href="mailto:mikelidjr913@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-handle">mikelidjr913@gmail.com</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- === YEAR SECTIONS === -->
+      <section class="section hidden year-section" id="section-sophomore" data-year="sophomore">
+        <div class="year-banner banner-soph">
+          <div class="year-banner-bg"></div>
+          <div class="year-banner-content">
+            <p class="year-tag">10th Grade</p>
+            <h1>Sophomore Year</h1>
+            <p class="year-sub">Where it all began. My first real projects.</p>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="project-list" data-year="sophomore"></div>
+        </div>
+      </section>
+
+      <section class="section hidden year-section" id="section-junior" data-year="junior">
+        <div class="year-banner banner-jun">
+          <div class="year-banner-bg"></div>
+          <div class="year-banner-content">
+            <p class="year-tag">11th Grade</p>
+            <h1>Junior Year</h1>
+            <p class="year-sub">Leveling up. Bigger ideas, bolder execution.</p>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="project-list" data-year="junior"></div>
+        </div>
+      </section>
+
+      <section class="section hidden year-section" id="section-senior">
+        <div class="year-banner banner-sen">
+          <div class="year-banner-bg"></div>
+          <div class="year-banner-content">
+            <p class="year-tag">12th Grade</p>
+            <h1>Senior Year</h1>
+            <p class="year-sub">The final chapter. My best work yet.</p>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="project-list" data-year="senior"></div>
+        </div>
+      </section>
+
+    </div><!-- end scroll-area -->
+  </main>
+
+  <!-- ===== NOW PLAYING BAR ===== -->
+  <footer class="now-playing-bar" id="now-playing">
+    <div class="np-left">
+      <div class="np-art" id="np-art">
+        <div class="np-art-inner"></div>
+      </div>
+      <div class="np-info">
+        <span class="np-title" id="np-title">Select a project</span>
+        <span class="np-subtitle" id="np-subtitle">Click any project to view</span>
+      </div>
+      <button class="np-heart" id="np-heart" aria-label="Like">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </button>
+    </div>
+
+    <div class="np-center">
+      <div class="np-controls">
+        <button class="ctrl-btn" id="shuffle-btn" aria-label="Shuffle">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.47 5.47a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l.97-.97H15c-.69 0-1.33.3-1.77.78l-5.1 5.67A2.25 2.25 0 016.45 16.5H3.75a.75.75 0 010-1.5h2.7c.35 0 .68-.14.92-.39l5.1-5.67A3.75 3.75 0 0115 7.5h2.44l-.97-.97a.75.75 0 010-1.06z"/></svg>
+        </button>
+        <button class="ctrl-btn" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+        </button>
+        <button class="ctrl-btn play-pause" id="play-pause-btn" aria-label="Play/Pause">
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="icon-pause hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button class="ctrl-btn" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14 5.02 2.14L8 14.14V9.86zM16 6h2v12h-2z"/></svg>
+        </button>
+        <button class="ctrl-btn" aria-label="Repeat">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+        </button>
+      </div>
+      <div class="np-progress">
+        <span class="np-time" id="np-current">0:00</span>
+        <div class="progress-bar-wrap" id="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-thumb" id="progress-thumb"></div>
+          </div>
+        </div>
+        <span class="np-time" id="np-total">0:00</span>
+      </div>
+    </div>
+
+    <div class="np-right">
+      <button class="ctrl-btn" aria-label="Queue">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
+      <div class="volume-wrap">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        <div class="volume-bar">
+          <div class="volume-fill" id="vol-fill" style="width:70%"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <div class="modal-art" id="modal-art"></div>
+      <div class="modal-body">
+        <p class="modal-year" id="modal-year"></p>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-tags" id="modal-tags"></div>
+        <div class="modal-actions">
+          <button class="btn-view-projects" id="modal-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            View Project
+          </button>
+          <button class="btn-follow" id="modal-github">GitHub</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
