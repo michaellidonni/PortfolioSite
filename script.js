@@ -27,7 +27,7 @@ const PROJECTS = [
     id: 1, year: 'sophomore', num: 1,
     icon: ICON.website, title: 'Cafe',
     desc: 'A collaborative group project building a full cafe website. Designed menus, layouts, and a responsive multi-page experience using HTML and CSS.',
-    tags: ['HTML', 'CSS', 'Collab'], featured: true,
+    tags: ['HTML', 'CSS', 'Collab'], featured: false,
     bg: 'linear-gradient(135deg, #e91e63 0%, #880e4f 100%)',
     github: 'https://github.com/michaellidonni/Cafe-Michael-LiDonni-Zahr-Evans-Chris-Demetri'
   },
@@ -75,7 +75,7 @@ const PROJECTS = [
     id: 7, year: 'sophomore', num: 7,
     icon: ICON.chart, title: 'Global Cancer Disparities',
     desc: 'An informational HTML/Bootstrap page presenting data on global cancer disparities. Focused on accessible layout and data-driven content presentation.',
-    tags: ['HTML', 'Bootstrap', 'Data'], featured: true,
+    tags: ['HTML', 'Bootstrap', 'Data'], featured: false,
     bg: 'linear-gradient(135deg, #e91e63 0%, #c62828 100%)',
     github: 'https://github.com/michaellidonni/Global-Cancer-Disparities-Michael-L'
   },
@@ -91,68 +91,172 @@ const PROJECTS = [
   // JUNIOR
   {
     id: 10, year: 'junior', num: 1,
-    icon: ICON.chip, title: 'Arduino Robot',
-    desc: 'Built an obstacle-avoiding robot using Arduino. Programmed sensors, motor drivers, and real-time decision logic. Won second place at the school fair!',
-    tags: ['Arduino', 'C++'], featured: true,
-    bg: 'linear-gradient(135deg, #ff9800 0%, #e65100 100%)'
+    icon: ICON.website, title: 'Summer Tainment',
+    desc: 'A hip-hop and entertainment themed website showcasing artists and culture. Bold, media-rich layout built with HTML and CSS.',
+    tags: ['HTML', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #ff9800 0%, #e65100 100%)',
+    github: 'https://github.com/michaellidonni/HipHop-Thing'
   },
   {
     id: 11, year: 'junior', num: 2,
-    icon: ICON.check, title: 'Task Manager App',
-    desc: 'A fully functional to-do app with local storage persistence, drag-and-drop reordering, and a clean responsive UI.',
-    tags: ['JavaScript', 'CSS'], featured: true,
-    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)'
+    icon: ICON.grid, title: 'Monthly Website Gallery',
+    desc: 'A gallery featuring a different themed website design each month. Practiced creative consistency and layout variation across multiple builds.',
+    tags: ['HTML', 'CSS', 'Design'], featured: false,
+    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
+    github: 'https://github.com/michaellidonni/MonthlyWebsiteGallery'
   },
   {
     id: 12, year: 'junior', num: 3,
-    icon: ICON.chart, title: 'Data Viz Dashboard',
-    desc: 'Interactive data visualization dashboard displaying school club statistics using Chart.js. Pulled from a Google Sheets backend.',
-    tags: ['JavaScript', 'Chart.js'], featured: false,
-    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)'
+    icon: ICON.paint, title: 'Famous',
+    desc: 'An interactive celebrity-inspired web experience. Eye-catching visuals and JavaScript-driven effects make this one stand out.',
+    tags: ['HTML', 'CSS', 'JavaScript'], featured: false,
+    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
+    github: 'https://github.com/michaellidonni/LookMaImFamous'
   },
   {
     id: 13, year: 'junior', num: 4,
-    icon: ICON.gamepad, title: 'Browser Game',
-    desc: 'A classic Snake game built entirely in vanilla JavaScript with a canvas renderer. Features high score tracking and increasing difficulty.',
-    tags: ['JavaScript', 'Canvas'], featured: false,
-    bg: 'linear-gradient(135deg, #f57c00 0%, #e65100 100%)'
+    icon: ICON.chat, title: 'Word Salad',
+    desc: 'A Mad Lib-style generator where users fill in blanks to create funny stories. Built with JavaScript DOM manipulation and form handling.',
+    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #f57c00 0%, #e65100 100%)',
+    github: 'https://github.com/michaellidonni/MadLibWebsite'
+  },
+  {
+    id: 14, year: 'junior', num: 5,
+    icon: ICON.chat, title: "What's My Name",
+    desc: 'A random name/testimonial generator that produces fun results on demand. Used JavaScript to handle dynamic content generation.',
+    tags: ['JavaScript', 'HTML'], featured: false,
+    bg: 'linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)',
+    github: 'https://github.com/michaellidonni/RandomTestamonial'
+  },
+  {
+    id: 15, year: 'junior', num: 6,
+    icon: ICON.gamepad, title: 'Rock Paper Scissors',
+    desc: 'A classic Rock Paper Scissors game with score tracking, animated results, and a clean minimal UI. Built with vanilla JavaScript.',
+    tags: ['JavaScript', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #ff9800 0%, #e65100 100%)',
+    github: 'https://github.com/michaellidonni/RPS'
+  },
+  {
+    id: 16, year: 'junior', num: 7,
+    icon: ICON.globe, title: 'Presidential',
+    desc: 'An informational website about U.S. presidents. Biography cards, historical facts, and a structured Bootstrap layout.',
+    tags: ['HTML', 'Bootstrap', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
+    github: 'https://github.com/michaellidonni/PresidentialBiography'
+  },
+  {
+    id: 17, year: 'junior', num: 8,
+    icon: ICON.gamepad, title: 'Lucky Guess',
+    desc: 'A Hangman-style word guessing game with dynamic letter input, win/loss detection, and animated visuals. Pure vanilla JavaScript.',
+    tags: ['JavaScript', 'CSS'], featured: true,
+    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
+    github: 'https://github.com/michaellidonni/Hangman'
+  },
+  {
+    id: 18, year: 'junior', num: 9,
+    icon: ICON.check, title: 'Wildcard',
+    desc: 'A free-choice project — a class schedule app for organizing and displaying course info. Practiced JavaScript data handling and UI design.',
+    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #f57c00 0%, #e65100 100%)',
+    github: 'https://github.com/michaellidonni/ClassScheduleProject'
+  },
+  {
+    id: 19, year: 'junior', num: 10,
+    icon: ICON.globe, title: 'Team Website',
+    desc: 'A collaborative team website built with partners. Focused on shared components, consistent styling, and coordinating a design across the group.',
+    tags: ['HTML', 'CSS', 'Collab'], featured: false,
+    bg: 'linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)',
+    github: 'https://github.com/michaellidonni/TeamWebsite'
+  },
+  {
+    id: 20, year: 'junior', num: 11,
+    icon: ICON.wave, title: 'Halloween Animations',
+    desc: 'Spooky Halloween-themed CSS animations and effects. Keyframes, transforms, and timing functions bring ghosts and ghouls to life on the page.',
+    tags: ['CSS', 'Animation'], featured: false,
+    bg: 'linear-gradient(135deg, #ff9800 0%, #bf360c 100%)',
+    github: 'https://github.com/michaellidonni/CSSAnimationProject'
+  },
+  {
+    id: 21, year: 'junior', num: 12,
+    icon: ICON.gamepad, title: 'Magic 8 Ball',
+    desc: 'A digital Magic 8 Ball with randomized answers and shake animations. JavaScript randomization meets smooth CSS transitions.',
+    tags: ['JavaScript', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
+    github: 'https://github.com/michaellidonni/MagicEightBall'
+  },
+  {
+    id: 22, year: 'junior', num: 13,
+    icon: ICON.paint, title: 'Postcard Generator',
+    desc: 'A digital postcard creator where users customize and generate shareable postcards. Dynamic form inputs and real-time visual output.',
+    tags: ['JavaScript', 'CSS', 'HTML'], featured: false,
+    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
+    github: 'https://github.com/michaellidonni/PostcardGenerator'
   },
 
   // SENIOR
   {
-    id: 14, year: 'senior', num: 1,
-    icon: ICON.rocket, title: 'Senior Capstone',
-    desc: 'My flagship project — a full-stack web application solving a real problem for our school. Built with React on the frontend and a Python Flask backend.',
-    tags: ['React', 'Python', 'Flask'], featured: true,
+    id: 23, year: 'senior', num: 1,
+    icon: ICON.globe, title: 'College Recruitment',
+    desc: 'A professional college recruitment website with program listings, admissions info, and student profiles. Clean, institutional design.',
+    tags: ['HTML', 'CSS', 'Bootstrap'], featured: false,
+    bg: 'linear-gradient(135deg, #1db954 0%, #0d7a35 100%)',
+    github: 'https://github.com/michaellidonni/CollegeRecruitment'
+  },
+  {
+    id: 24, year: 'senior', num: 2,
+    icon: ICON.check, title: '"Refresher" Websites',
+    desc: 'A series of refresher lesson projects revisiting JavaScript fundamentals — functions, event listeners, and array methods — with hands-on exercises.',
+    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+    github: 'https://github.com/michaellidonni/1.01-Functions-Refresher-Lesson-Code'
+  },
+  {
+    id: 25, year: 'senior', num: 3,
+    icon: ICON.chip, title: 'JSON Lessons',
+    desc: 'Hands-on project exploring JSON data and AJAX requests. Fetched live data from external sources and rendered it dynamically in the DOM.',
+    tags: ['JavaScript', 'AJAX', 'JSON'], featured: false,
+    bg: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)',
+    github: 'https://github.com/michaellidonni/2.02-AJAX-Project'
+  },
+  {
+    id: 26, year: 'senior', num: 4,
+    icon: ICON.grid, title: 'jQuery Slideshow',
+    desc: 'NJIT Project 1 — a jQuery-powered image slideshow app with smooth transitions, prev/next controls, and a fully responsive layout.',
+    tags: ['jQuery', 'JavaScript', 'CSS'], featured: false,
+    bg: 'linear-gradient(135deg, #1db954 0%, #166534 100%)',
+    github: 'https://github.com/michaellidonni/NJIT-Project-1-Slideshow-App-with-jQuery'
+  },
+  {
+    id: 27, year: 'senior', num: 5,
+    icon: ICON.paint, title: 'Movie Poster Gallery',
+    desc: 'NJIT Project 2 — a movie poster gallery built with jQuery. Dynamic card rendering, hover effects, and a polished cinema-themed UI.',
+    tags: ['jQuery', 'JavaScript', 'CSS'], featured: true,
+    bg: 'linear-gradient(135deg, #34d399 0%, #1db954 100%)',
+    github: 'https://github.com/michaellidonni/NJIT-Project-2-Movie-Poster-Gallery'
+  },
+  {
+    id: 28, year: 'senior', num: 6,
+    icon: ICON.website, title: 'MHS Website',
+    desc: 'A full multi-page school website with navigation, event listings, faculty pages, and consistent branding throughout.',
+    tags: ['HTML', 'CSS', 'Bootstrap'], featured: false,
     bg: 'linear-gradient(135deg, #1db954 0%, #0d7a35 100%)'
   },
   {
-    id: 15, year: 'senior', num: 2,
-    icon: ICON.chat, title: 'AI Chatbot',
-    desc: 'Integrated an AI chatbot into a student resource portal using an LLM API. Handles FAQs, schedules, and homework help suggestions.',
-    tags: ['Python', 'AI', 'API'], featured: true,
-    bg: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)'
+    id: 29, year: 'senior', num: 7,
+    icon: ICON.rocket, title: 'Client Project',
+    desc: 'A real-world client website for Z Best Goodies. Delivered a custom site from requirements through revisions to final handoff.',
+    tags: ['HTML', 'CSS', 'JavaScript'], featured: false,
+    bg: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+    github: 'https://github.com/michaellidonni/ZBestGoodies'
   },
   {
-    id: 16, year: 'senior', num: 3,
-    icon: ICON.wave, title: 'Music Visualizer',
-    desc: 'Real-time audio visualizer using the Web Audio API. Analyzes microphone input and renders beautiful animated frequency bars.',
-    tags: ['JavaScript', 'Web Audio'], featured: false,
-    bg: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)'
-  },
-  {
-    id: 17, year: 'senior', num: 4,
-    icon: ICON.globe, title: 'Community App',
-    desc: 'A neighborhood bulletin board app with user authentication, image uploads, and a real-time feed. Deployed to the cloud.',
-    tags: ['React', 'Firebase'], featured: false,
-    bg: 'linear-gradient(135deg, #1db954 0%, #166534 100%)'
-  },
-  {
-    id: 18, year: 'senior', num: 5,
-    icon: ICON.grid, title: 'Design System',
-    desc: 'Created a comprehensive UI component library and design system for our school\'s web properties. Documented in Storybook.',
-    tags: ['Figma', 'CSS', 'React'], featured: false,
-    bg: 'linear-gradient(135deg, #34d399 0%, #1db954 100%)'
+    id: 30, year: 'senior', num: 8,
+    icon: ICON.rocket, title: 'Portfolio Website',
+    desc: 'This very site. A Spotify-themed developer portfolio built from scratch with vanilla JS, custom CSS, and animated components throughout.',
+    tags: ['HTML', 'CSS', 'JavaScript'], featured: true,
+    bg: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)',
+    github: 'https://github.com/michaellidonni/PortfolioSite'
   }
 ];
 
