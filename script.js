@@ -305,6 +305,7 @@ function init() {
   setupNavigation();
   setupPlayback();
   setupSearch();
+  setupIntroOverlay();
   setupModal();
   setupProgressBar();
   setupVolumeBar();
@@ -488,12 +489,7 @@ function setupYearPills() {
 
 // ─── PLAYBACK ────────────────────────────────
 function setupPlayback() {
-  playBtn?.addEventListener('click', () => {
-    const first = PROJECTS.find(p => p.featured) || PROJECTS[0];
-    playProject(first.id);
-    vinylRecord.classList.add('spinning');
-  });
-
+  playBtn?.addEventListener('click', openIntroOverlay);
   playPauseBtn?.addEventListener('click', togglePlay);
 }
 
@@ -648,38 +644,96 @@ npHeart?.addEventListener('click', () => {
 
 // ─── SEARCH ──────────────────────────────────
 function setupSearch() {
+  let preSearchSection = 'home';
+
   searchInput?.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
     state.searchQuery = query;
 
     if (!query) {
-      // Restore all
       $$('.track-item').forEach(el => { el.style.display = ''; });
       $$('.project-card').forEach(el => { el.style.display = ''; });
+      const noResults = $('#search-no-results');
+      if (noResults) noResults.remove();
+      showSection(preSearchSection);
+      const prevLink = document.querySelector(`.nav-link[data-section="${preSearchSection}"]`)
+        || document.querySelector(`.year-link[data-year="${preSearchSection}"]`);
+      if (prevLink) setActiveLink(prevLink);
       return;
     }
 
-    // Filter track items
+    // Save where user was before searching
+    if (state.currentSection !== 'projects') {
+      preSearchSection = state.currentSection;
+    }
+
+    // Navigate to projects section so results are visible
+    showSection('projects');
+    const projLink = document.querySelector('.nav-link[data-section="projects"]');
+    if (projLink) setActiveLink(projLink);
+
+    // Filter all project cards (projects section shows all of them)
+    let anyVisible = false;
+    $$('.project-card').forEach(card => {
+      const id = parseInt(card.dataset.id);
+      const proj = PROJECTS.find(p => p.id === id);
+      if (!proj) return;
+      const matches = proj.title.toLowerCase().includes(query)
+        || proj.tags.some(t => t.toLowerCase().includes(query))
+        || proj.desc.toLowerCase().includes(query)
+        || proj.year.includes(query);
+      card.style.display = matches ? '' : 'none';
+      if (matches) anyVisible = true;
+    });
+
+    // Also filter track items in year sections
     $$('.track-item').forEach(item => {
       const id = parseInt(item.dataset.id);
       const proj = PROJECTS.find(p => p.id === id);
       if (!proj) return;
       const matches = proj.title.toLowerCase().includes(query)
         || proj.tags.some(t => t.toLowerCase().includes(query))
+        || proj.desc.toLowerCase().includes(query)
         || proj.year.includes(query);
       item.style.display = matches ? '' : 'none';
     });
 
-    // Filter cards
-    $$('.project-card').forEach(card => {
-      const id = parseInt(card.dataset.id);
-      const proj = PROJECTS.find(p => p.id === id);
-      if (!proj) return;
-      const matches = proj.title.toLowerCase().includes(query)
-        || proj.tags.some(t => t.toLowerCase().includes(query));
-      card.style.display = matches ? '' : 'none';
-    });
+    // Show/hide no-results message
+    const grid = $('#all-projects-grid');
+    let noResults = $('#search-no-results');
+    if (!anyVisible) {
+      if (!noResults) {
+        noResults = document.createElement('p');
+        noResults.id = 'search-no-results';
+        noResults.textContent = `No projects found for "${e.target.value}"`;
+        noResults.style.cssText = 'color:var(--text-subdued);grid-column:1/-1;padding:2rem 0;';
+        grid?.appendChild(noResults);
+      }
+    } else if (noResults) {
+      noResults.remove();
+    }
   });
+}
+
+// ─── INTRO OVERLAY ───────────────────────────
+function openIntroOverlay() {
+  const overlay = $('#intro-overlay');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  overlay._autoClose = setTimeout(closeIntroOverlay, 4500);
+}
+
+function closeIntroOverlay() {
+  const overlay = $('#intro-overlay');
+  if (!overlay) return;
+  clearTimeout(overlay._autoClose);
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function setupIntroOverlay() {
+  $('#intro-skip')?.addEventListener('click', closeIntroOverlay);
 }
 
 // ─── MODAL ───────────────────────────────────
@@ -689,7 +743,7 @@ function setupModal() {
     if (e.target === modalOverlay) closeModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') { closeModal(); closeIntroOverlay(); }
   });
 
   $('#modal-play')?.addEventListener('click', () => {
