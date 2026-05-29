@@ -47,6 +47,20 @@
       </div>
 
       <div class="nav-section">
+        <p class="nav-label">Portfolio</p>
+        <ul>
+          <li><a href="#" class="nav-link" data-section="reflection">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Reflection
+          </a></li>
+          <li><a href="#" class="nav-link" data-section="future">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            Future Plans
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
         <p class="nav-label">Playlists</p>
         <ul>
           <li><a href="#" class="nav-link playlist-link year-link" data-year="sophomore">
@@ -117,32 +131,45 @@
       <!-- === HOME SECTION === -->
       <section class="section" id="section-home">
 
-        <!-- Hero Banner -->
-        <div class="hero-banner">
-          <div class="hero-organic-bg"></div>
-          <div class="hero-photo">
-            <div class="hero-avatar-circle">M</div>
-          </div>
-          <div class="hero-info">
-            <p class="hero-available">
-              <span class="available-dot"></span>
-              Available for Work
-            </p>
-            <h1 class="hero-title">Hi, I'm<br/><span class="hero-name">Michael LiDonni</span></h1>
-            <p class="hero-tagline">I build digital experiences</p>
-            <p class="hero-desc">Web Designer &amp; Developer<br/>based in New Jersey</p>
-            <div class="hero-actions">
-              <button class="btn-view-projects" id="view-projects-btn">View Projects</button>
-              <button class="btn-play-intro" id="play-btn">
-                <span class="intro-play-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </span>
-                Play Intro
-              </button>
+        <div class="hero-about-wrap">
+
+          <!-- Hero Banner -->
+          <div class="hero-banner">
+            <div class="hero-organic-bg"></div>
+            <div class="hero-photo">
+              <div class="hero-avatar-circle">M</div>
+            </div>
+            <div class="hero-info">
+              <p class="hero-available">
+                <span class="available-dot"></span>
+                Available for Work
+              </p>
+              <h1 class="hero-title">Hi, I'm<br/><span class="hero-name">Michael LiDonni</span></h1>
+              <p class="hero-tagline">I build digital experiences</p>
+              <p class="hero-desc">Web Designer &amp; Developer<br/>based in New Jersey</p>
+              <div class="hero-actions">
+                <button class="btn-view-projects" id="view-projects-btn">View Projects</button>
+                <button class="btn-play-intro" id="play-btn">
+                  <span class="intro-play-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </span>
+                  Play Intro
+                </button>
+              </div>
             </div>
           </div>
 
-          <!-- Currently Listening -->
+          <!-- About Me Preview -->
+          <div class="about-preview-card">
+            <div class="about-preview-bg"></div>
+            <div class="about-preview-content">
+              <h2>About Me</h2>
+              <p>I'm a web design student with a passion for building clean, functional digital experiences. From Bootstrap layouts to full-stack projects, I love turning ideas into real products.</p>
+              <button class="btn-more-about" id="more-about-btn">More About Me</button>
+            </div>
+          </div>
+
+          <!-- Currently Listening (overlaid across hero + about) -->
           <div class="currently-listening">
             <div class="cl-header">
               <div class="cl-eq">
@@ -172,16 +199,7 @@
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- About Me Preview -->
-        <div class="about-preview-card">
-          <div class="about-preview-bg"></div>
-          <div class="about-preview-content">
-            <h2>About Me</h2>
-            <p>I'm a web design student with a passion for building clean, functional digital experiences. From Bootstrap layouts to full-stack projects, I love turning ideas into real products.</p>
-            <button class="btn-more-about" id="more-about-btn">More About Me</button>
-          </div>
         </div>
 
         <!-- Featured Projects -->
@@ -211,6 +229,25 @@
               <div class="stat"><span class="stat-num" data-target="18">0</span><span class="stat-label">Projects</span></div>
               <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">Skills</span></div>
             </div>
+          </div>
+        </div>
+
+        <div class="about-body">
+          <div class="about-section-block">
+            <h2 class="about-section-title">Who I Am</h2>
+            <p>I'm Michael LiDonni, a senior at Manalapan High School in Manalapan, New Jersey. I've been studying Web Design for three years through my school's CTE program, and what started as a class requirement quickly became one of my biggest passions. I love the process of taking an idea from a rough sketch to a fully working, polished website — every step of that process excites me.</p>
+            <p>Outside of coding, I'm a big music fan (hence the Spotify-inspired design for this portfolio). I also enjoy gaming, watching sports, and hanging out with friends. I'm the kind of person who gets genuinely excited when I figure out a tricky CSS bug or finally get a JavaScript function to behave — there's nothing quite like that "it works!" moment.</p>
+          </div>
+
+          <div class="about-section-block">
+            <h2 class="about-section-title">My Background</h2>
+            <p>My web design journey started in 10th grade when I built my first Bootstrap page. It wasn't pretty, but it worked — and that hooked me. Over the next three years I went from wrangling grid systems and responsive layouts to writing full JavaScript applications, working with jQuery and AJAX, and eventually taking on a real-world client project for a local business. Each year I pushed myself to learn something I hadn't tried before, and this portfolio is the result of all of that work stacked on top of itself.</p>
+            <p>I've built everything from solo projects and games to collaborative team websites and an NJIT university program course project. I've worked across every part of the front-end stack — HTML structure, CSS styling and animation, and JavaScript logic — and I'm always looking to add to that toolkit.</p>
+          </div>
+
+          <div class="about-section-block">
+            <h2 class="about-section-title">Interests &amp; Hobbies</h2>
+            <p>When I'm not coding, you'll find me listening to music (rap, R&amp;B, and lo-fi are my go-tos), following the NFL and NBA, or deep in a game. I'm also really into UI/UX design — I spend a lot of time studying apps and websites I like, picking apart why they feel good to use. That curiosity about why things are designed the way they are is what keeps driving me to build better.</p>
           </div>
         </div>
       </section>
@@ -338,6 +375,89 @@
         </div>
       </section>
 
+      <!-- === REFLECTION SECTION === -->
+      <section class="section hidden" id="section-reflection">
+        <div class="info-hero">
+          <p class="year-tag">Looking Back</p>
+          <h1>Course Reflection</h1>
+          <p class="year-sub">Three years of growth, challenges, and breakthroughs.</p>
+        </div>
+        <div class="info-body">
+
+          <div class="info-block">
+            <h2>Sophomore Year — Finding My Footing</h2>
+            <p>My first year in Web Design was equal parts exciting and overwhelming. I had never written a line of HTML before, so learning the basics of page structure, Bootstrap grids, and responsive layouts felt like picking up a new language. The Cafe project was a turning point — it was the first time I worked with a team to ship something that actually looked like a real website. I learned that collaboration is just as important as technical skill, and that getting feedback from teammates makes the final product way better than anything I'd build alone.</p>
+            <p>The biggest challenge that year was understanding why things broke. I'd make a change and the entire layout would collapse, and I had no idea how to trace it. Over time I developed a habit of reading error messages carefully and testing one change at a time — a problem-solving approach that has stuck with me ever since.</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Junior Year — Leveling Up with JavaScript</h2>
+            <p>Junior year was where everything accelerated. Picking up JavaScript opened a whole new dimension of what I could build. Games like Rock Paper Scissors and Lucky Guess (Hangman) weren't just fun to make — they pushed me to think programmatically, breaking problems into functions and managing state across a page. I built my first interactive Mad Lib generator, my first random content generator, and a schedule app that I actually used myself.</p>
+            <p>The hardest lesson of junior year was debugging logic errors. CSS bugs are visual — you can see what's wrong. JavaScript bugs are invisible until something just doesn't happen when it should. Learning to use console.log() strategically, step through code mentally, and isolate variables was one of the most valuable skills I developed. By the end of the year, I felt genuinely confident with vanilla JS for the first time.</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Senior Year — Thinking Like a Developer</h2>
+            <p>Senior year was about putting everything together and raising the bar. Working with jQuery and AJAX for the first time showed me how powerful external libraries and data fetching can be. The NJIT partnership projects — the slideshow app and movie poster gallery — gave me a taste of building to a spec, which felt much more like real professional work than open-ended class assignments.</p>
+            <p>The client project for Z Best Goodies was the most challenging and rewarding thing I've built. Talking to a real client, understanding their needs, making revisions based on their feedback, and eventually handing off a finished product was a completely different experience from school projects. It taught me that communication and iteration are just as important as clean code.</p>
+            <p>Building this portfolio as my capstone project has been the most technical thing I've done — custom CSS animations, a Spotify-themed UI system, JSON data loading, and a live site preview inside a scaled iframe. It represents everything I've learned, and I'm proud of how it turned out.</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Overall Takeaways</h2>
+            <p>Three years of web design taught me that the best way to learn is to build things that are slightly out of reach. Every time I pushed into something I didn't fully understand — responsive design, JavaScript DOM manipulation, AJAX, custom CSS animations — I came out the other side with a skill that stuck. I also learned that good design is about the user's experience first, not just making things look nice. A site that looks great but is confusing to use has missed the point.</p>
+            <p>Most importantly, I learned to be comfortable not knowing everything. The web is huge and always changing. The skill isn't knowing it all — it's knowing how to figure things out.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- === FUTURE PLANS SECTION === -->
+      <section class="section hidden" id="section-future">
+        <div class="info-hero">
+          <p class="year-tag">Looking Ahead</p>
+          <h1>Future Plans</h1>
+          <p class="year-sub">Where I want to go from here.</p>
+        </div>
+        <div class="info-body">
+
+          <div class="info-block">
+            <h2>College &amp; Education</h2>
+            <p>I plan to pursue a degree in Computer Science or Web Development after graduation. My experience in the NJIT CTE partnership program has shown me how much I enjoy university-level technical challenges, and I want to go deeper into algorithms, data structures, and full-stack development. I'm looking at schools with strong CS and software engineering programs where I can build on the front-end foundation I've developed here.</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Technologies I Want to Learn</h2>
+            <p>My front-end foundation is solid, but there's so much more I want to explore. At the top of my list:</p>
+            <ul class="info-list">
+              <li><strong>React</strong> — Component-based thinking is the next evolution from vanilla JS, and it's the industry standard for modern UIs.</li>
+              <li><strong>Node.js &amp; Express</strong> — I want to understand the back end so I can build full-stack applications, not just front-end pages.</li>
+              <li><strong>TypeScript</strong> — After working in JavaScript for two years, I understand why typed systems catch bugs early.</li>
+              <li><strong>Databases (SQL + NoSQL)</strong> — Every real application needs to store and retrieve data. This is a gap I want to close.</li>
+              <li><strong>Git &amp; CI/CD</strong> — I already use GitHub, but I want to get into proper branching workflows, pull requests, and automated deployment pipelines.</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Career Goals</h2>
+            <p>Long term, I want to work as a front-end developer or full-stack developer at a company where I can work on products that lots of people actually use. I'm interested in both startups (where you wear many hats and move fast) and established tech companies (where you can go deep on a specific product area). I also have a side interest in UI/UX design — I love the intersection of making things beautiful and making them work well — so I'd love to stay close to the design side of development throughout my career.</p>
+            <p>A personal goal is to build at least one original SaaS product or open-source tool that other developers find useful. I want to know what it feels like to ship something from zero to users on my own.</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Projects I Want to Build Next</h2>
+            <ul class="info-list">
+              <li>A full-stack social app (users, auth, real database) built with React and Node</li>
+              <li>A browser-based music visualizer using the Web Audio API</li>
+              <li>A personal developer blog built with a static site generator</li>
+              <li>An open-source portfolio template others can fork and customize</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
     </div><!-- end scroll-area -->
   </main>
 
@@ -412,6 +532,8 @@
         <h2 class="modal-title" id="modal-title"></h2>
         <p class="modal-desc" id="modal-desc"></p>
         <div class="modal-tags" id="modal-tags"></div>
+        <div class="modal-extra" id="modal-skills" style="display:none"></div>
+        <div class="modal-extra" id="modal-reflection" style="display:none"></div>
         <div class="modal-actions">
           <button class="btn-view-projects" id="modal-play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -446,6 +568,7 @@
     <button class="intro-skip" id="intro-skip">Skip</button>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

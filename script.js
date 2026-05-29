@@ -4,8 +4,8 @@
 
 'use strict';
 
-// ─── PROJECT DATA ───────────────────────────
-// TODO: Replace with your actual projects!
+// ─── SVG ICON MAP ─────────────────────────────
+// Keys here match the "iconKey" field in projects.json
 const ICON = {
   website:    `<svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="6.5" cy="6.5" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="10" cy="6.5" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/></svg>`,
   calculator: `<svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 7h8"/><circle cx="8.5" cy="12" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="12" cy="12" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="15.5" cy="12" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="8.5" cy="16" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="12" cy="16" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/><circle cx="15.5" cy="16" r="1" fill="rgba(255,255,255,0.85)" stroke="none"/></svg>`,
@@ -21,246 +21,11 @@ const ICON = {
   grid:       `<svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>`,
 };
 
-const PROJECTS = [
-  // SOPHOMORE
-  {
-    id: 1, year: 'sophomore', num: 1,
-    icon: ICON.website, title: 'Cafe',
-    desc: 'A collaborative group project building a full cafe website. Designed menus, layouts, and a responsive multi-page experience using HTML and CSS.',
-    tags: ['HTML', 'CSS', 'Collab'], featured: false,
-    bg: 'linear-gradient(135deg, #e91e63 0%, #880e4f 100%)',
-    github: 'https://github.com/michaellidonni/Cafe-Michael-LiDonni-Zahr-Evans-Chris-Demetri'
-  },
-  {
-    id: 2, year: 'sophomore', num: 2,
-    icon: ICON.grid, title: 'My First Bootstrap Grid',
-    desc: 'First hands-on project using Bootstrap\'s grid system. Learned the 12-column layout, breakpoints, and responsive design fundamentals.',
-    tags: ['HTML', 'Bootstrap'], featured: false,
-    bg: 'linear-gradient(135deg, #c2185b 0%, #7b1fa2 100%)',
-    github: 'https://github.com/michaellidonni/MyFirstBootstrapGridMLidonni'
-  },
-  {
-    id: 3, year: 'sophomore', num: 3,
-    icon: ICON.website, title: 'Puppy Bootstrap',
-    desc: 'A Bootstrap-powered webpage dedicated to puppies. Practiced cards, navbars, and Bootstrap utility classes while keeping it fun.',
-    tags: ['HTML', 'Bootstrap', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #f06292 0%, #c2185b 100%)',
-    github: 'https://github.com/michaellidonni/PuppyBootstrapMichaelLiDonni'
-  },
-  {
-    id: 4, year: 'sophomore', num: 4,
-    icon: ICON.globe, title: 'Vacation Destination',
-    desc: 'A Bootstrap travel page showcasing a dream vacation destination. Used carousels, cards, and a responsive navbar to build a polished layout.',
-    tags: ['HTML', 'Bootstrap', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #e53935 0%, #b71c1c 100%)',
-    github: 'https://github.com/michaellidonni/TCA3-Vacation-Destination-Bootstrap-Website'
-  },
-  {
-    id: 5, year: 'sophomore', num: 5,
-    icon: ICON.website, title: 'Farmers Market',
-    desc: 'A local farmers market website built with Bootstrap. Designed product sections, vendor info, and a contact form with a clean, earthy look.',
-    tags: ['HTML', 'Bootstrap', 'CSS'], featured: true,
-    bg: 'linear-gradient(135deg, #d81b60 0%, #880e4f 100%)',
-    github: 'https://github.com/michaellidonni/FarmersMarket'
-  },
-  {
-    id: 6, year: 'sophomore', num: 6,
-    icon: ICON.grid, title: 'Flexbox Layout',
-    desc: 'A deep-dive project into CSS Flexbox. Built multiple layout patterns — navigation bars, card grids, and centered hero sections — from scratch.',
-    tags: ['HTML', 'CSS', 'Flexbox'], featured: false,
-    bg: 'linear-gradient(135deg, #ad1457 0%, #6a1b9a 100%)',
-    github: 'https://github.com/michaellidonni/Flexbox-MichaelLiDonni'
-  },
-  {
-    id: 7, year: 'sophomore', num: 7,
-    icon: ICON.chart, title: 'Global Cancer Disparities',
-    desc: 'An informational HTML/Bootstrap page presenting data on global cancer disparities. Focused on accessible layout and data-driven content presentation.',
-    tags: ['HTML', 'Bootstrap', 'Data'], featured: false,
-    bg: 'linear-gradient(135deg, #e91e63 0%, #c62828 100%)',
-    github: 'https://github.com/michaellidonni/Global-Cancer-Disparities-Michael-L'
-  },
-  {
-    id: 8, year: 'sophomore', num: 8,
-    icon: ICON.paint, title: 'Designer Tribute Page',
-    desc: 'A tribute page celebrating a notable designer. Practiced typography, visual hierarchy, and building biography-style layouts with HTML and CSS.',
-    tags: ['HTML', 'CSS', 'Design'], featured: false,
-    bg: 'linear-gradient(135deg, #f48fb1 0%, #e91e63 100%)',
-    github: 'https://github.com/michaellidonni/Designer-Tribute-Page'
-  },
+// ─── PROJECT DATA ─────────────────────────────
+// Populated asynchronously from projects.json via jQuery $.getJSON at the bottom
+let PROJECTS = [];
 
-  // JUNIOR
-  {
-    id: 10, year: 'junior', num: 1,
-    icon: ICON.website, title: 'Summer Tainment',
-    desc: 'A hip-hop and entertainment themed website showcasing artists and culture. Bold, media-rich layout built with HTML and CSS.',
-    tags: ['HTML', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #ff9800 0%, #e65100 100%)',
-    github: 'https://github.com/michaellidonni/HipHop-Thing'
-  },
-  {
-    id: 11, year: 'junior', num: 2,
-    icon: ICON.grid, title: 'Monthly Website Gallery',
-    desc: 'A gallery featuring a different themed website design each month. Practiced creative consistency and layout variation across multiple builds.',
-    tags: ['HTML', 'CSS', 'Design'], featured: false,
-    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
-    github: 'https://github.com/michaellidonni/MonthlyWebsiteGallery'
-  },
-  {
-    id: 12, year: 'junior', num: 3,
-    icon: ICON.paint, title: 'Famous',
-    desc: 'An interactive celebrity-inspired web experience. Eye-catching visuals and JavaScript-driven effects make this one stand out.',
-    tags: ['HTML', 'CSS', 'JavaScript'], featured: false,
-    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
-    github: 'https://github.com/michaellidonni/LookMaImFamous'
-  },
-  {
-    id: 13, year: 'junior', num: 4,
-    icon: ICON.chat, title: 'Word Salad',
-    desc: 'A Mad Lib-style generator where users fill in blanks to create funny stories. Built with JavaScript DOM manipulation and form handling.',
-    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #f57c00 0%, #e65100 100%)',
-    github: 'https://github.com/michaellidonni/MadLibWebsite'
-  },
-  {
-    id: 14, year: 'junior', num: 5,
-    icon: ICON.chat, title: "What's My Name",
-    desc: 'A random name/testimonial generator that produces fun results on demand. Used JavaScript to handle dynamic content generation.',
-    tags: ['JavaScript', 'HTML'], featured: false,
-    bg: 'linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)',
-    github: 'https://github.com/michaellidonni/RandomTestamonial'
-  },
-  {
-    id: 15, year: 'junior', num: 6,
-    icon: ICON.gamepad, title: 'Rock Paper Scissors',
-    desc: 'A classic Rock Paper Scissors game with score tracking, animated results, and a clean minimal UI. Built with vanilla JavaScript.',
-    tags: ['JavaScript', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #ff9800 0%, #e65100 100%)',
-    github: 'https://github.com/michaellidonni/RPS'
-  },
-  {
-    id: 16, year: 'junior', num: 7,
-    icon: ICON.globe, title: 'Presidential',
-    desc: 'An informational website about U.S. presidents. Biography cards, historical facts, and a structured Bootstrap layout.',
-    tags: ['HTML', 'Bootstrap', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
-    github: 'https://github.com/michaellidonni/PresidentialBiography'
-  },
-  {
-    id: 17, year: 'junior', num: 8,
-    icon: ICON.gamepad, title: 'Lucky Guess',
-    desc: 'A Hangman-style word guessing game with dynamic letter input, win/loss detection, and animated visuals. Pure vanilla JavaScript.',
-    tags: ['JavaScript', 'CSS'], featured: true,
-    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
-    github: 'https://github.com/michaellidonni/Hangman'
-  },
-  {
-    id: 18, year: 'junior', num: 9,
-    icon: ICON.check, title: 'Wildcard',
-    desc: 'A free-choice project — a class schedule app for organizing and displaying course info. Practiced JavaScript data handling and UI design.',
-    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #f57c00 0%, #e65100 100%)',
-    github: 'https://github.com/michaellidonni/ClassScheduleProject'
-  },
-  {
-    id: 19, year: 'junior', num: 10,
-    icon: ICON.globe, title: 'Team Website',
-    desc: 'A collaborative team website built with partners. Focused on shared components, consistent styling, and coordinating a design across the group.',
-    tags: ['HTML', 'CSS', 'Collab'], featured: false,
-    bg: 'linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)',
-    github: 'https://github.com/michaellidonni/TeamWebsite'
-  },
-  {
-    id: 20, year: 'junior', num: 11,
-    icon: ICON.wave, title: 'Halloween Animations',
-    desc: 'Spooky Halloween-themed CSS animations and effects. Keyframes, transforms, and timing functions bring ghosts and ghouls to life on the page.',
-    tags: ['CSS', 'Animation'], featured: false,
-    bg: 'linear-gradient(135deg, #ff9800 0%, #bf360c 100%)',
-    github: 'https://github.com/michaellidonni/CSSAnimationProject'
-  },
-  {
-    id: 21, year: 'junior', num: 12,
-    icon: ICON.gamepad, title: 'Magic 8 Ball',
-    desc: 'A digital Magic 8 Ball with randomized answers and shake animations. JavaScript randomization meets smooth CSS transitions.',
-    tags: ['JavaScript', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)',
-    github: 'https://github.com/michaellidonni/MagicEightBall'
-  },
-  {
-    id: 22, year: 'junior', num: 13,
-    icon: ICON.paint, title: 'Postcard Generator',
-    desc: 'A digital postcard creator where users customize and generate shareable postcards. Dynamic form inputs and real-time visual output.',
-    tags: ['JavaScript', 'CSS', 'HTML'], featured: false,
-    bg: 'linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)',
-    github: 'https://github.com/michaellidonni/PostcardGenerator'
-  },
-
-  // SENIOR
-  {
-    id: 23, year: 'senior', num: 1,
-    icon: ICON.globe, title: 'College Recruitment',
-    desc: 'A professional college recruitment website with program listings, admissions info, and student profiles. Clean, institutional design.',
-    tags: ['HTML', 'CSS', 'Bootstrap'], featured: false,
-    bg: 'linear-gradient(135deg, #1db954 0%, #0d7a35 100%)',
-    github: 'https://github.com/michaellidonni/CollegeRecruitment'
-  },
-  {
-    id: 24, year: 'senior', num: 2,
-    icon: ICON.check, title: '"Refresher" Websites',
-    desc: 'A series of refresher lesson projects revisiting JavaScript fundamentals — functions, event listeners, and array methods — with hands-on exercises.',
-    tags: ['JavaScript', 'HTML', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
-    github: 'https://github.com/michaellidonni/1.01-Functions-Refresher-Lesson-Code'
-  },
-  {
-    id: 25, year: 'senior', num: 3,
-    icon: ICON.chip, title: 'JSON Lessons',
-    desc: 'Hands-on project exploring JSON data and AJAX requests. Fetched live data from external sources and rendered it dynamically in the DOM.',
-    tags: ['JavaScript', 'AJAX', 'JSON'], featured: false,
-    bg: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)',
-    github: 'https://github.com/michaellidonni/2.02-AJAX-Project'
-  },
-  {
-    id: 26, year: 'senior', num: 4,
-    icon: ICON.grid, title: 'jQuery Slideshow',
-    desc: 'NJIT Project 1 — a jQuery-powered image slideshow app with smooth transitions, prev/next controls, and a fully responsive layout.',
-    tags: ['jQuery', 'JavaScript', 'CSS'], featured: false,
-    bg: 'linear-gradient(135deg, #1db954 0%, #166534 100%)',
-    github: 'https://github.com/michaellidonni/NJIT-Project-1-Slideshow-App-with-jQuery'
-  },
-  {
-    id: 27, year: 'senior', num: 5,
-    icon: ICON.paint, title: 'Movie Poster Gallery',
-    desc: 'NJIT Project 2 — a movie poster gallery built with jQuery. Dynamic card rendering, hover effects, and a polished cinema-themed UI.',
-    tags: ['jQuery', 'JavaScript', 'CSS'], featured: true,
-    bg: 'linear-gradient(135deg, #34d399 0%, #1db954 100%)',
-    github: 'https://github.com/michaellidonni/NJIT-Project-2-Movie-Poster-Gallery'
-  },
-  {
-    id: 28, year: 'senior', num: 6,
-    icon: ICON.website, title: 'MHS Website',
-    desc: 'A full multi-page school website with navigation, event listings, faculty pages, and consistent branding throughout.',
-    tags: ['HTML', 'CSS', 'Bootstrap'], featured: false,
-    bg: 'linear-gradient(135deg, #1db954 0%, #0d7a35 100%)'
-  },
-  {
-    id: 29, year: 'senior', num: 7,
-    icon: ICON.rocket, title: 'Client Project',
-    desc: 'A real-world client website for Z Best Goodies. Delivered a custom site from requirements through revisions to final handoff.',
-    tags: ['HTML', 'CSS', 'JavaScript'], featured: false,
-    bg: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
-    github: 'https://github.com/michaellidonni/ZBestGoodies'
-  },
-  {
-    id: 30, year: 'senior', num: 8,
-    icon: ICON.rocket, title: 'Portfolio Website',
-    desc: 'This very site. A Spotify-themed developer portfolio built from scratch with vanilla JS, custom CSS, and animated components throughout.',
-    tags: ['HTML', 'CSS', 'JavaScript'], featured: true,
-    bg: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)',
-    github: 'https://github.com/michaellidonni/PortfolioSite'
-  }
-];
-
-// ─── STATE ──────────────────────────────────
+// ─── APP STATE ───────────────────────────────
 const state = {
   currentSection: 'home',
   playingId: null,
@@ -271,7 +36,7 @@ const state = {
   searchQuery: '',
 };
 
-// ─── DOM REFS ────────────────────────────────
+// ─── DOM SHORTCUTS ────────────────────────────
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
@@ -282,7 +47,7 @@ const searchInput   = $('#search-input');
 const playBtn       = $('#play-btn');
 const viewProjectsBtn = $('#view-projects-btn');
 const playPauseBtn  = $('#play-pause-btn');
-const vinylRecord   = null;
+const vinylRecord   = null; // No vinyl element in current layout; all calls guarded with ?.
 const progressFill  = $('#progress-fill');
 const progressThumb = $('#progress-thumb');
 const progressWrap  = $('#progress-wrap');
@@ -297,7 +62,8 @@ const modalClose    = $('#modal-close');
 const featuredGrid  = $('#featured-grid');
 const backBtn       = $('#back-btn');
 
-// ─── INIT ────────────────────────────────────
+// ─── INIT ─────────────────────────────────────
+// Called after PROJECTS is loaded from JSON
 function init() {
   renderFeaturedCards();
   renderAllProjectsGrid();
@@ -312,7 +78,8 @@ function init() {
   animateCounters();
 }
 
-// ─── RENDER FEATURED CARDS ──────────────────
+// ─── RENDER FEATURED CARDS ───────────────────
+// Shows only projects with featured: true on the Home section
 function renderFeaturedCards() {
   const featured = PROJECTS.filter(p => p.featured);
   featuredGrid.innerHTML = featured.map(p => cardHTML(p)).join('');
@@ -360,7 +127,8 @@ function addCardListeners(container) {
   });
 }
 
-// ─── RENDER PROJECT LISTS ───────────────────
+// ─── RENDER PROJECT LISTS ─────────────────────
+// Builds the track-list view for each year's playlist section
 function renderProjectLists() {
   const years = ['sophomore', 'junior', 'senior'];
   years.forEach(year => {
@@ -373,11 +141,11 @@ function renderProjectLists() {
       </div>
       ${projects.map((p, i) => trackItemHTML(p, i + 1)).join('')}
     `;
-    // Stagger animations
+    // Stagger slide-in animation for each track row
     container.querySelectorAll('.track-item').forEach((el, i) => {
       el.style.animationDelay = `${i * 60}ms`;
     });
-    // Listeners
+    // Click: play if not already playing, open modal if already playing
     container.querySelectorAll('.track-item').forEach(item => {
       item.addEventListener('click', () => {
         const id = parseInt(item.dataset.id);
@@ -421,6 +189,7 @@ function eqBarsHTML() {
 
 // ─── NAVIGATION ──────────────────────────────
 function setupNavigation() {
+  // Wire up all sidebar nav links to show the matching section
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -456,7 +225,6 @@ function setupNavigation() {
 }
 
 function showSection(name) {
-  // Map nav data-section to section IDs
   const sectionId = `section-${name}`;
   $$('.section').forEach(s => s.classList.add('hidden'));
   const target = $(`#${sectionId}`);
@@ -465,7 +233,6 @@ function showSection(name) {
     scrollArea.scrollTo({ top: 0, behavior: 'smooth' });
   }
   state.currentSection = name;
-  // Animate counters when visiting about
   if (name === 'about') animateCounters();
 }
 
@@ -474,13 +241,12 @@ function setActiveLink(el) {
   el.classList.add('active');
 }
 
-// ─── YEAR PILL NAVIGATION ───────────────────
+// ─── YEAR PILL NAVIGATION ────────────────────
 function setupYearPills() {
   yearPills.forEach(pill => {
     pill.addEventListener('click', () => {
       const year = pill.dataset.year;
       showSection(year);
-      // Find and activate matching sidebar link
       const link = document.querySelector(`.year-link[data-year="${year}"]`);
       if (link) setActiveLink(link);
     });
@@ -489,6 +255,7 @@ function setupYearPills() {
 
 // ─── PLAYBACK ────────────────────────────────
 function setupPlayback() {
+  // Play button opens the animated intro overlay
   playBtn?.addEventListener('click', openIntroOverlay);
   playPauseBtn?.addEventListener('click', togglePlay);
 }
@@ -497,36 +264,30 @@ function playProject(id) {
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return;
 
-  // Stop previous
   if (state.progressInterval) clearInterval(state.progressInterval);
 
   state.playingId = id;
   state.isPlaying = true;
   state.progress = 0;
 
-  // Update Now Playing bar
+  // Update the Now Playing bar at the bottom
   npTitle.textContent = project.title;
   npSubtitle.textContent = project.tags.join(' · ');
   npArtInner.innerHTML = project.icon;
   npArtInner.style.background = project.bg;
 
-  // Random duration between 2:30 - 4:45
+  // Random duration between 2:30–4:45 for the fake track timer
   const totalSecs = Math.floor(Math.random() * 135) + 150;
   npTotal.textContent = formatTime(totalSecs);
 
-  // Update vinyl
-  vinylRecord.classList.add('spinning');
-
-  // Update play/pause icon
+  vinylRecord?.classList.add('spinning');
   updatePlayPauseIcon(true);
-
-  // Animate the bar
   startProgress(totalSecs);
 
-  // Refresh track lists
+  // Re-render track lists so the active row highlights
   renderProjectLists();
 
-  // Flash the now-playing bar art
+  // Quick scale pop on the album art
   const npArt = $('.np-art');
   npArt.style.transform = 'scale(0.9)';
   setTimeout(() => { npArt.style.transition = 'transform 0.3s'; npArt.style.transform = 'scale(1)'; }, 50);
@@ -541,10 +302,10 @@ function togglePlay() {
   updatePlayPauseIcon(state.isPlaying);
 
   if (state.isPlaying) {
-    vinylRecord.classList.add('spinning');
+    vinylRecord?.classList.add('spinning');
     resumeProgress();
   } else {
-    vinylRecord.classList.remove('spinning');
+    vinylRecord?.classList.remove('spinning');
     if (state.progressInterval) clearInterval(state.progressInterval);
   }
 }
@@ -572,18 +333,17 @@ function startProgress(totalSecs) {
       state.progress = 0;
       clearInterval(state.progressInterval);
       updatePlayPauseIcon(false);
-      vinylRecord.classList.remove('spinning');
+      vinylRecord?.classList.remove('spinning');
     }
     setProgressUI(state.progress, totalSecs);
   }, tickMs);
 }
 
 function resumeProgress() {
-  // Estimate remaining from current progress
   const totalSecs = timeToSecs(npTotal.textContent);
   const elapsed   = state.progress / 100 * totalSecs;
   const remaining = totalSecs - elapsed;
-  startProgress(remaining > 0 ? totalSecs : 180); // restart from same total
+  startProgress(remaining > 0 ? totalSecs : 180);
 }
 
 function setProgressUI(pct, totalSecs) {
@@ -604,7 +364,7 @@ function timeToSecs(timeStr) {
   return (m || 0) * 60 + (s || 0);
 }
 
-// ─── PROGRESS BAR SEEK ──────────────────────
+// ─── PROGRESS BAR SEEK ───────────────────────
 function setupProgressBar() {
   progressWrap?.addEventListener('click', (e) => {
     const rect = progressWrap.querySelector('.progress-bar').getBoundingClientRect();
@@ -615,7 +375,7 @@ function setupProgressBar() {
   });
 }
 
-// ─── VOLUME BAR ─────────────────────────────
+// ─── VOLUME BAR ──────────────────────────────
 function setupVolumeBar() {
   const volBar  = $('.volume-bar');
   const volFill = $('#vol-fill');
@@ -636,13 +396,13 @@ npHeart?.addEventListener('click', () => {
   } else {
     state.liked.add(state.playingId);
     npHeart.classList.add('liked');
-    // Pop animation
     npHeart.style.transform = 'scale(1.3)';
     setTimeout(() => { npHeart.style.transform = ''; }, 200);
   }
 });
 
 // ─── SEARCH ──────────────────────────────────
+// Navigates to the Projects section and filters all cards by query
 function setupSearch() {
   let preSearchSection = 'home';
 
@@ -651,6 +411,7 @@ function setupSearch() {
     state.searchQuery = query;
 
     if (!query) {
+      // Restore all cards and go back to where the user was
       $$('.track-item').forEach(el => { el.style.display = ''; });
       $$('.project-card').forEach(el => { el.style.display = ''; });
       const noResults = $('#search-no-results');
@@ -662,17 +423,17 @@ function setupSearch() {
       return;
     }
 
-    // Save where user was before searching
+    // Remember where the user was before searching
     if (state.currentSection !== 'projects') {
       preSearchSection = state.currentSection;
     }
 
-    // Navigate to projects section so results are visible
+    // Jump to the all-projects grid so results are visible
     showSection('projects');
     const projLink = document.querySelector('.nav-link[data-section="projects"]');
     if (projLink) setActiveLink(projLink);
 
-    // Filter all project cards (projects section shows all of them)
+    // Filter project cards by title, tags, description, or year
     let anyVisible = false;
     $$('.project-card').forEach(card => {
       const id = parseInt(card.dataset.id);
@@ -698,7 +459,7 @@ function setupSearch() {
       item.style.display = matches ? '' : 'none';
     });
 
-    // Show/hide no-results message
+    // Show a message if nothing matched
     const grid = $('#all-projects-grid');
     let noResults = $('#search-no-results');
     if (!anyVisible) {
@@ -721,6 +482,7 @@ function openIntroOverlay() {
   if (!overlay) return;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Auto-dismiss after 4.5 seconds if the user doesn't skip
   overlay._autoClose = setTimeout(closeIntroOverlay, 4500);
 }
 
@@ -749,10 +511,13 @@ function setupModal() {
   $('#modal-play')?.addEventListener('click', () => {
     const title = $('#modal-title').textContent;
     const proj = PROJECTS.find(p => p.title === title);
-    if (proj) {
-      playProject(proj.id);
-      closeModal();
+    if (proj?.github) {
+      // Derive GitHub Pages URL from repo URL: github.com/user/repo → user.github.io/repo
+      const m = proj.github.match(/https:\/\/github\.com\/([^/]+)\/([^/]+)/);
+      const url = m ? `https://${m[1]}.github.io/${m[2]}/` : proj.github;
+      window.open(url, '_blank');
     }
+    closeModal();
   });
 
   $('#modal-github')?.addEventListener('click', () => {
@@ -766,19 +531,53 @@ function openModal(id) {
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return;
 
-  const yearLabel = { sophomore: 'Sophomore Year · 10th Grade', junior: 'Junior Year · 11th Grade', senior: 'Senior Year · 12th Grade' }[project.year];
-  const yearColor = { sophomore: 'var(--soph-color)', junior: 'var(--jun-color)', senior: 'var(--sen-color)' }[project.year];
+  const yearLabel = {
+    sophomore: 'Sophomore Year · 10th Grade',
+    junior:    'Junior Year · 11th Grade',
+    senior:    'Senior Year · 12th Grade'
+  }[project.year];
+  const yearColor = {
+    sophomore: 'var(--soph-color)',
+    junior:    'var(--jun-color)',
+    senior:    'var(--sen-color)'
+  }[project.year];
 
   $('#modal-year').textContent  = yearLabel;
   $('#modal-title').textContent = project.title;
   $('#modal-desc').textContent  = project.desc;
-  $('#modal-art').innerHTML   = project.icon;
+  $('#modal-art').innerHTML     = project.icon;
   $('#modal-art').style.background = project.bg;
 
   const tagsEl = $('#modal-tags');
   tagsEl.innerHTML = project.tags.map(t =>
     `<span class="modal-tag" style="background:${yearColor}22;color:${yearColor}">${t}</span>`
   ).join('');
+
+  // Show skills learned if the project has them (featured projects only)
+  const skillsEl = $('#modal-skills');
+  if (skillsEl) {
+    if (project.skillsLearned && project.skillsLearned.length) {
+      skillsEl.innerHTML = '<h3 class="modal-section-label">Skills Learned</h3>'
+        + '<div class="modal-skills-list">'
+        + project.skillsLearned.map(s => `<span class="modal-skill-chip">${s}</span>`).join('')
+        + '</div>';
+      skillsEl.style.display = '';
+    } else {
+      skillsEl.style.display = 'none';
+    }
+  }
+
+  // Show reflection paragraph if the project has one
+  const reflEl = $('#modal-reflection');
+  if (reflEl) {
+    if (project.reflection) {
+      reflEl.innerHTML = '<h3 class="modal-section-label">Reflection</h3>'
+        + `<p class="modal-reflection-text">${project.reflection}</p>`;
+      reflEl.style.display = '';
+    } else {
+      reflEl.style.display = 'none';
+    }
+  }
 
   const githubBtn = $('#modal-github');
   if (githubBtn) githubBtn.style.display = project.github ? '' : 'none';
@@ -793,6 +592,7 @@ function closeModal() {
 }
 
 // ─── ANIMATED COUNTERS ───────────────────────
+// Counts up from 0 to the data-target value when the About section is shown
 function animateCounters() {
   $$('.stat-num').forEach(el => {
     const target = parseInt(el.dataset.target);
@@ -814,7 +614,7 @@ function animateCounters() {
   });
 }
 
-// ─── SCROLL-BASED TOPBAR EFFECT ─────────────
+// ─── SCROLL-BASED TOPBAR EFFECT ──────────────
 scrollArea?.addEventListener('scroll', () => {
   const topbar = $('.topbar');
   if (scrollArea.scrollTop > 40) {
@@ -824,7 +624,8 @@ scrollArea?.addEventListener('scroll', () => {
   }
 });
 
-// ─── CARD HOVER PARTICLE EFFECT ─────────────
+// ─── CARD HOVER PARTICLE EFFECT ──────────────
+// Tracks mouse position within hovered card for the glow gradient
 document.addEventListener('mousemove', (e) => {
   const card = e.target.closest?.('.project-card');
   if (!card) return;
@@ -835,13 +636,16 @@ document.addEventListener('mousemove', (e) => {
   card.style.setProperty('--mouse-y', y + '%');
 });
 
-// ─── VINYL SPIN ON HOVER ─────────────────────
-document.querySelector('.hero-art')?.addEventListener('mouseenter', () => {
-  if (!state.isPlaying) vinylRecord.classList.add('spinning');
-});
-document.querySelector('.hero-art')?.addEventListener('mouseleave', () => {
-  if (!state.isPlaying) vinylRecord.classList.remove('spinning');
-});
-
-// ─── BOOT ────────────────────────────────────
-document.addEventListener('DOMContentLoaded', init);
+// ─── BOOT ─────────────────────────────────────
+// Fetch projects.json with jQuery, map iconKey → SVG, then start the app
+jQuery.getJSON('projects.json')
+  .done(function(data) {
+    PROJECTS = data;
+    PROJECTS.forEach(function(p) {
+      p.icon = ICON[p.iconKey] || ICON.website;
+    });
+    init();
+  })
+  .fail(function() {
+    console.error('Could not load projects.json — make sure the file exists and you are serving from a local server.');
+  });
