@@ -8,7 +8,7 @@
     "skillsLearned": ["Multi-page HTML structure", "CSS styling & layout", "Team collaboration", "Git workflow basics", "Consistent design across pages"],
     "reflection": "The Cafe project was my first real taste of collaborative web development. Working with teammates taught me how to divide responsibilities, merge code without conflicts, and maintain a consistent design across pages — skills I carry into every project since.",
     "featured": false,
-    "bg": "linear-gradient(135deg, #e91e63 0%, #880e4f 100%)",
+    "bg": "linear-gradient(135deg, #6ee7a0 0%, #2dba6a 100%)",
     "github": "https://github.com/michaellidonni/Cafe-Michael-LiDonni-Zahr-Evans-Chris-Demetri",
     "screenshot": ""
   },
@@ -21,7 +21,7 @@
     "skillsLearned": ["Bootstrap grid system", "Responsive breakpoints"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #c2185b 0%, #7b1fa2 100%)",
+    "bg": "linear-gradient(135deg, #5ecf88 0%, #28a055 100%)",
     "github": "https://github.com/michaellidonni/MyFirstBootstrapGridMLidonni",
     "screenshot": ""
   },
@@ -34,7 +34,7 @@
     "skillsLearned": ["Bootstrap cards", "Navbar components", "Utility classes"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #f06292 0%, #c2185b 100%)",
+    "bg": "linear-gradient(135deg, #80efb4 0%, #4cd285 100%)",
     "github": "https://github.com/michaellidonni/PuppyBootstrapMichaelLiDonni",
     "screenshot": ""
   },
@@ -47,7 +47,7 @@
     "skillsLearned": ["Bootstrap carousel", "Responsive navbar", "Travel page layout"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #e53935 0%, #b71c1c 100%)",
+    "bg": "linear-gradient(135deg, #4cce7e 0%, #26aa57 100%)",
     "github": "https://github.com/michaellidonni/TCA3-Vacation-Destination-Bootstrap-Website",
     "screenshot": ""
   },
@@ -60,7 +60,7 @@
     "skillsLearned": ["Bootstrap grid & components", "Responsive design", "Form design", "CSS color theming", "Visual consistency"],
     "reflection": "Farmers Market was my strongest project from sophomore year. I pushed myself beyond the default Bootstrap look by customizing components and paying close attention to spacing and color. It was the first site I was genuinely proud to show someone.",
     "featured": true,
-    "bg": "linear-gradient(135deg, #d81b60 0%, #880e4f 100%)",
+    "bg": "linear-gradient(135deg, #5ecf88 0%, #35b465 100%)",
     "github": "https://github.com/michaellidonni/FarmersMarket",
     "screenshot": ""
   },
@@ -73,7 +73,7 @@
     "skillsLearned": ["CSS Flexbox", "flex-direction & wrap", "justify-content & align-items", "Building layouts without Bootstrap", "Custom nav bars"],
     "reflection": "Flexbox was the project that finally made layouts click for me. Before this, I relied entirely on Bootstrap's grid. Understanding how flex containers and flex items actually work gave me real control over page layout for the first time.",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ad1457 0%, #6a1b9a 100%)",
+    "bg": "linear-gradient(135deg, #8af2bc 0%, #5ecf88 100%)",
     "github": "https://github.com/michaellidonni/Flexbox-MichaelLiDonni",
     "screenshot": ""
   },
@@ -85,8 +85,8 @@
     "tags": ["HTML", "Bootstrap", "Data"],
     "skillsLearned": ["Data presentation", "Accessible layout", "Content organization"],
     "reflection": "",
-    "featured": false,
-    "bg": "linear-gradient(135deg, #e91e63 0%, #c62828 100%)",
+    "featured": true,
+    "bg": "linear-gradient(135deg, #52c87c 0%, #2da85a 100%)",
     "github": "https://github.com/michaellidonni/Global-Cancer-Disparities-Michael-L",
     "screenshot": ""
   },
@@ -99,7 +99,7 @@
     "skillsLearned": ["Typography selection", "Visual hierarchy", "Biography layout design", "CSS custom styling", "Design research"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #f48fb1 0%, #e91e63 100%)",
+    "bg": "linear-gradient(135deg, #74dea2 0%, #44bf74 100%)",
     "github": "https://github.com/michaellidonni/Designer-Tribute-Page",
     "screenshot": ""
   },
@@ -112,7 +112,7 @@
     "skillsLearned": ["Media-rich layouts", "Bold visual design", "Content curation"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ff9800 0%, #e65100 100%)",
+    "bg": "linear-gradient(135deg, #1db954 0%, #0d8f3e 100%)",
     "github": "https://github.com/michaellidonni/HipHop-Thing",
     "screenshot": ""
   },
@@ -125,7 +125,7 @@
     "skillsLearned": ["Design consistency", "Layout variation", "Creative theming"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)",
+    "bg": "linear-gradient(135deg, #22c45c 0%, #158840 100%)",
     "github": "https://github.com/michaellidonni/MonthlyWebsiteGallery",
     "screenshot": ""
   },
@@ -138,7 +138,7 @@
     "skillsLearned": ["JavaScript interactivity", "CSS visual effects", "DOM manipulation"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)",
+    "bg": "linear-gradient(135deg, #17a848 0%, #0b7030 100%)",
     "github": "https://github.com/michaellidonni/LookMaImFamous",
     "screenshot": ""
   },
@@ -151,7 +151,7 @@
     "skillsLearned": ["JavaScript form handling", "DOM manipulation", "String templating", "User input processing", "Dynamic output"],
     "reflection": "Word Salad was where I first understood how JavaScript could make a page feel truly interactive. Capturing form input, inserting it into a template, and displaying the result in real time — simple as it sounds, it was a turning point for how I thought about the web.",
     "featured": false,
-    "bg": "linear-gradient(135deg, #f57c00 0%, #e65100 100%)",
+    "bg": "linear-gradient(135deg, #1db954 0%, #0f7838 100%)",
     "github": "https://github.com/michaellidonni/MadLibWebsite",
     "screenshot": ""
   },
@@ -164,7 +164,7 @@
     "skillsLearned": ["JavaScript arrays", "Math.random()", "Dynamic content generation"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)",
+    "bg": "linear-gradient(135deg, #24c05e 0%, #189244 100%)",
     "github": "https://github.com/michaellidonni/RandomTestamonial",
     "screenshot": ""
   },
@@ -177,7 +177,7 @@
     "skillsLearned": ["Game logic in JavaScript", "Score tracking with variables", "Conditional logic", "DOM updates", "CSS animation"],
     "reflection": "Rock Paper Scissors was the project where JavaScript finally clicked for me. Writing the game logic from scratch — comparing choices, tracking scores, updating the display — made me realize how much you can do with just a few lines of well-organized code.",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ff9800 0%, #e65100 100%)",
+    "bg": "linear-gradient(135deg, #19aa4c 0%, #0e7535 100%)",
     "github": "https://github.com/michaellidonni/RPS",
     "screenshot": ""
   },
@@ -190,7 +190,7 @@
     "skillsLearned": ["Bootstrap card layout", "Historical content presentation", "Structured information design"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)",
+    "bg": "linear-gradient(135deg, #20b858 0%, #148040 100%)",
     "github": "https://github.com/michaellidonni/PresidentialBiography",
     "screenshot": ""
   },
@@ -203,7 +203,7 @@
     "skillsLearned": ["JavaScript arrays & string methods", "Game state management", "Win/loss logic", "Dynamic letter rendering", "CSS transitions"],
     "reflection": "Building Hangman from scratch was one of my biggest challenges in junior year. I had to think through the entire game state — letters guessed, wrong attempts, win/loss conditions — and translate that logic into code that worked. Finishing it felt like a real milestone.",
     "featured": true,
-    "bg": "linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)",
+    "bg": "linear-gradient(135deg, #1db954 0%, #0f8038 100%)",
     "github": "https://github.com/michaellidonni/Hangman",
     "screenshot": ""
   },
@@ -215,9 +215,9 @@
     "tags": ["JavaScript", "HTML", "CSS"],
     "skillsLearned": ["JavaScript data handling", "UI design for apps", "Object arrays"],
     "reflection": "",
-    "featured": false,
-    "bg": "linear-gradient(135deg, #f57c00 0%, #e65100 100%)",
-    "github": "https://github.com/michaellidonni/ClassScheduleProject",
+    "featured": true,
+    "bg": "linear-gradient(135deg, #16a246 0%, #0c7032 100%)",
+    "github": "https://github.com/michaellidonni/HipHop-Thing",
     "screenshot": ""
   },
   {
@@ -229,7 +229,7 @@
     "skillsLearned": ["Team coordination", "Shared component design", "Consistent cross-contributor styling"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffa000 0%, #ff6f00 100%)",
+    "bg": "linear-gradient(135deg, #22bc5e 0%, #178842 100%)",
     "github": "https://github.com/michaellidonni/TeamWebsite",
     "screenshot": ""
   },
@@ -242,7 +242,7 @@
     "skillsLearned": ["CSS keyframe animations", "transform & translate", "animation-timing-function", "Staggered animation delays"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ff9800 0%, #bf360c 100%)",
+    "bg": "linear-gradient(135deg, #1ab050 0%, #0e7838 100%)",
     "github": "https://github.com/michaellidonni/CSSAnimationProject",
     "screenshot": ""
   },
@@ -255,7 +255,7 @@
     "skillsLearned": ["JavaScript randomization", "CSS shake animations", "Array of responses", "Event-driven UI"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffa726 0%, #fb8c00 100%)",
+    "bg": "linear-gradient(135deg, #26c462 0%, #18904a 100%)",
     "github": "https://github.com/michaellidonni/MagicEightBall",
     "screenshot": ""
   },
@@ -268,7 +268,7 @@
     "skillsLearned": ["Real-time DOM updates", "Dynamic form handling", "JavaScript event listeners", "CSS visual output"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #ffb74d 0%, #ff9800 100%)",
+    "bg": "linear-gradient(135deg, #1db954 0%, #117535 100%)",
     "github": "https://github.com/michaellidonni/PostcardGenerator",
     "screenshot": ""
   },
@@ -280,8 +280,8 @@
     "tags": ["HTML", "CSS", "Bootstrap"],
     "skillsLearned": ["Professional web design", "Institutional layouts", "Bootstrap customization", "Multi-section navigation"],
     "reflection": "",
-    "featured": false,
-    "bg": "linear-gradient(135deg, #1db954 0%, #0d7a35 100%)",
+    "featured": true,
+    "bg": "linear-gradient(135deg, #0d7a35 0%, #042c18 100%)",
     "github": "https://github.com/michaellidonni/CollegeRecruitment",
     "screenshot": ""
   },
@@ -294,7 +294,7 @@
     "skillsLearned": ["JavaScript functions", "Array methods", "Event listeners", "Code review habits"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)",
+    "bg": "linear-gradient(135deg, #0a6b30 0%, #032510 100%)",
     "github": "https://github.com/michaellidonni/1.01-Functions-Refresher-Lesson-Code",
     "screenshot": ""
   },
@@ -307,7 +307,7 @@
     "skillsLearned": ["JSON data structures", "AJAX / fetch API", "Dynamic DOM rendering from data", "External API requests"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #4ade80 0%, #16a34a 100%)",
+    "bg": "linear-gradient(135deg, #0f8038 0%, #054520 100%)",
     "github": "https://github.com/michaellidonni/2.02-AJAX-Project",
     "screenshot": ""
   },
@@ -320,7 +320,7 @@
     "skillsLearned": ["jQuery selectors & methods", "Slideshow logic", "Smooth CSS transitions", "Responsive image layout"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #1db954 0%, #166534 100%)",
+    "bg": "linear-gradient(135deg, #0b7232 0%, #04381a 100%)",
     "github": "https://github.com/michaellidonni/NJIT-Project-1-Slideshow-App-with-jQuery",
     "screenshot": ""
   },
@@ -333,7 +333,7 @@
     "skillsLearned": ["jQuery dynamic rendering", "JSON data to HTML cards", "Hover effects with jQuery", "Gallery layout design", "Cinema-themed UI"],
     "reflection": "This NJIT project was my real introduction to jQuery and dynamic content rendering. Learning to generate HTML from data — rather than writing each card by hand — completely changed how I think about building scalable sites. It laid the foundation for how this very portfolio works.",
     "featured": false,
-    "bg": "linear-gradient(135deg, #34d399 0%, #1db954 100%)",
+    "bg": "linear-gradient(135deg, #0d7a35 0%, #054020 100%)",
     "github": "https://github.com/michaellidonni/NJIT-Project-2-Movie-Poster-Gallery",
     "screenshot": ""
   },
@@ -346,7 +346,7 @@
     "skillsLearned": ["Multi-page site architecture", "Consistent branding", "Event listing layouts", "Faculty page design"],
     "reflection": "",
     "featured": false,
-    "bg": "linear-gradient(135deg, #1db954 0%, #0d7a35 100%)",
+    "bg": "linear-gradient(135deg, #096b2e 0%, #033018 100%)",
     "github": "",
     "screenshot": ""
   },
@@ -358,8 +358,8 @@
     "tags": ["HTML", "CSS", "JavaScript"],
     "skillsLearned": ["Client communication", "Requirements gathering", "Iterative design & revision", "Real-world deployment", "Project handoff process"],
     "reflection": "Working with a real client on Z Best Goodies was unlike any classroom assignment. I had to listen to what they actually needed, translate that into a design, present it, revise based on feedback, and deliver something they could use. That full process — requirements to handoff — prepared me for professional work more than anything else in the program.",
-    "featured": false,
-    "bg": "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)",
+    "featured": true,
+    "bg": "linear-gradient(135deg, #0e7535 0%, #054020 100%)",
     "github": "https://github.com/michaellidonni/ZBestGoodies",
     "screenshot": ""
   },
@@ -371,8 +371,8 @@
     "tags": ["HTML", "CSS", "JavaScript"],
     "skillsLearned": ["Single-page app architecture", "CSS animations & keyframes", "Vanilla JS modules", "Spotify-inspired UI/UX", "JSON data loading with jQuery", "Responsive design"],
     "reflection": "This portfolio is the culmination of everything I've learned in three years. I designed the concept from scratch — inspired by Spotify's UI — and built every component myself. It's the project I'm most proud of, and it represents exactly the kind of developer I want to become.",
-    "featured": true,
-    "bg": "linear-gradient(135deg, #4ade80 0%, #16a34a 100%)",
+    "featured": false,
+    "bg": "linear-gradient(135deg, #0a6b30 0%, #042818 100%)",
     "github": "https://github.com/michaellidonni/PortfolioSite",
     "screenshot": ""
   }

@@ -25,6 +25,10 @@ const ICON = {
 // Populated asynchronously from projects.json via jQuery $.getJSON at the bottom
 let PROJECTS = [];
 
+// ─── MODAL STATE ─────────────────────────────
+let currentModalProject = null;
+const codeCache = {};
+
 // ─── APP STATE ───────────────────────────────
 const state = {
   currentSection: 'home',
@@ -96,7 +100,7 @@ function renderAllProjectsGrid() {
 function cardHTML(project) {
   const yearLabel = { sophomore: 'Sophomore', junior: 'Junior', senior: 'Senior' }[project.year];
   const yearColor = { sophomore: 'var(--soph-color)', junior: 'var(--jun-color)', senior: 'var(--sen-color)' }[project.year];
-  const badgeBg   = { sophomore: 'rgba(233,30,99,0.15)', junior: 'rgba(255,152,0,0.15)', senior: 'rgba(29,185,84,0.15)' }[project.year];
+  const badgeBg   = { sophomore: 'rgba(94,207,136,0.18)', junior: 'rgba(29,185,84,0.15)', senior: 'rgba(10,107,48,0.2)' }[project.year];
 
   return `
     <div class="project-card" data-id="${project.id}" style="--card-glow: radial-gradient(ellipse at 50% 0%, ${yearColor}18 0%, transparent 70%)">
@@ -508,28 +512,141 @@ function setupModal() {
     if (e.key === 'Escape') { closeModal(); closeIntroOverlay(); }
   });
 
+  // Tab bar
+  document.querySelectorAll('.modal-tab').forEach(tab => {
+    tab.addEventListener('click', () => switchModalTab(tab.dataset.tab));
+  });
+
+  // Code file tabs
+  document.querySelectorAll('.code-file-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.code-file-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      loadProjectCode(tab.dataset.file);
+    });
+  });
+
+  // Copy button
+  document.getElementById('code-copy-btn')?.addEventListener('click', () => {
+    const content = document.getElementById('code-display')?.textContent || '';
+    navigator.clipboard.writeText(content).then(() => {
+      const btn = document.getElementById('code-copy-btn');
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    });
+  });
+
   $('#modal-play')?.addEventListener('click', () => {
-    const title = $('#modal-title').textContent;
-    const proj = PROJECTS.find(p => p.title === title);
-    if (proj?.github) {
-      // Derive GitHub Pages URL from repo URL: github.com/user/repo → user.github.io/repo
-      const m = proj.github.match(/https:\/\/github\.com\/([^/]+)\/([^/]+)/);
-      const url = m ? `https://${m[1]}.github.io/${m[2]}/` : proj.github;
+    if (currentModalProject?.github) {
+      const m = currentModalProject.github.match(/github\.com\/([^/]+)\/([^/]+)/);
+      const url = m ? `https://${m[1]}.github.io/${m[2]}/` : currentModalProject.github;
       window.open(url, '_blank');
     }
     closeModal();
   });
 
   $('#modal-github')?.addEventListener('click', () => {
-    const title = $('#modal-title').textContent;
-    const proj = PROJECTS.find(p => p.title === title);
-    if (proj?.github) window.open(proj.github, '_blank');
+    if (currentModalProject?.github) window.open(currentModalProject.github, '_blank');
   });
+}
+
+function switchModalTab(tabName) {
+  document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+  document.querySelectorAll('.modal-pane').forEach(p => p.classList.toggle('hidden', p.id !== `modal-pane-${tabName}`));
+  const modal = document.querySelector('.modal');
+  modal.classList.remove('tab-overview', 'tab-code', 'tab-preview');
+  modal.classList.add(`tab-${tabName}`);
+  if (tabName === 'code') {
+    const activeFile = document.querySelector('.code-file-tab.active')?.dataset.file || 'index.html';
+    loadProjectCode(activeFile);
+  }
+  if (tabName === 'preview') loadProjectPreview();
+}
+
+function getRepoFromProject(project) {
+  if (!project?.github) return null;
+  const m = project.github.match(/github\.com\/[^/]+\/([^/]+)/);
+  return m ? m[1] : null;
+}
+
+async function fetchRaw(repo, filename) {
+  for (const branch of ['main', 'master']) {
+    try {
+      const res = await fetch(`https://raw.githubusercontent.com/michaellidonni/${repo}/${branch}/${filename}`);
+      if (res.ok) return await res.text();
+    } catch (_) {}
+  }
+  return null;
+}
+
+function applyCode(el, content, filename) {
+  if (!content) {
+    el.className = 'code-empty';
+    el.textContent = `${filename} not found in this repository.`;
+    return;
+  }
+  const langMap = { html: 'language-html', css: 'language-css', js: 'language-javascript' };
+  const ext = filename.split('.').pop();
+  el.className = langMap[ext] || '';
+  el.textContent = content;
+  if (window.hljs) hljs.highlightElement(el);
+}
+
+async function loadProjectCode(filename) {
+  const codeEl = document.getElementById('code-display');
+  if (!codeEl) return;
+  const repo = getRepoFromProject(currentModalProject);
+  if (!repo) {
+    codeEl.className = 'code-empty';
+    codeEl.textContent = 'No GitHub repository linked for this project.';
+    return;
+  }
+  const key = `${repo}/${filename}`;
+  if (codeCache[key] !== undefined) { applyCode(codeEl, codeCache[key], filename); return; }
+  codeEl.className = 'code-empty';
+  codeEl.textContent = `Loading ${filename}…`;
+  const content = await fetchRaw(repo, filename);
+  codeCache[key] = content;
+  applyCode(codeEl, content, filename);
+}
+
+function loadProjectPreview() {
+  const frame = document.getElementById('preview-frame');
+  const urlLabel = document.getElementById('preview-url-label');
+  const openLink = document.getElementById('preview-open-link');
+  const loading = document.getElementById('preview-loading');
+  const repo = getRepoFromProject(currentModalProject);
+  if (!repo) {
+    if (loading) { loading.style.display = 'flex'; loading.textContent = 'No preview available.'; }
+    return;
+  }
+  const url = `https://michaellidonni.github.io/${repo}/`;
+  if (urlLabel) urlLabel.textContent = url;
+  if (openLink) openLink.href = url;
+  if (loading) { loading.style.display = 'flex'; loading.textContent = 'Loading preview…'; }
+  if (frame) {
+    frame.onload = () => { if (loading) loading.style.display = 'none'; };
+    frame.src = url;
+  }
 }
 
 function openModal(id) {
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return;
+
+  currentModalProject = project;
+
+  // Reset tabs to overview
+  document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'overview'));
+  document.querySelectorAll('.modal-pane').forEach(p => p.classList.toggle('hidden', p.id !== 'modal-pane-overview'));
+  const modal = document.querySelector('.modal');
+  modal.classList.remove('tab-overview', 'tab-code', 'tab-preview');
+  modal.classList.add('tab-overview');
+  document.querySelectorAll('.code-file-tab').forEach((t, i) => t.classList.toggle('active', i === 0));
+  const frame = document.getElementById('preview-frame');
+  if (frame) frame.src = 'about:blank';
+  const codeEl = document.getElementById('code-display');
+  if (codeEl) { codeEl.className = ''; codeEl.textContent = 'Select a file above to load code.'; }
 
   const yearLabel = {
     sophomore: 'Sophomore Year · 10th Grade',
