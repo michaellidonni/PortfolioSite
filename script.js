@@ -636,6 +636,9 @@ function openModal(id) {
 
   currentModalProject = project;
 
+  // Always load the selected project into the Now Playing bar
+  playProject(id);
+
   // Reset tabs to overview
   document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'overview'));
   document.querySelectorAll('.modal-pane').forEach(p => p.classList.toggle('hidden', p.id !== 'modal-pane-overview'));
